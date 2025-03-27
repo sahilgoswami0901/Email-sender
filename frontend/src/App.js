@@ -9,7 +9,7 @@ function App() {
   const [emailText, setEmailText] = useState("");
 
   const handleGenerate = async () => {
-    const res = await fetch("http://localhost:5000/api/generate-email", {
+    const res = await fetch("https://email-sender-d4mq.onrender.com/api/generate-email", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ recipient, prompt })
